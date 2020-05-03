@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <!-- Use a templated HTML printing scriptlet to import common stylesheet -->
+    <?!= HtmlService.createHtmlOutputFromFile('Stylesheet').getContent(); ?>
+  </head>
+  <body>
+
+    <div class="sidebar branding-below">
+      <div class="block" id="sidebar-button-bar">
+        <button class="action" id="sidebar-d20-button">Roll d20</button>
+        <button class="action" id="sidebar-d12-button">Roll d12</button>
+      </div>
+      <div class="block" id="sidebar-button-bar">
+        <button class="action" id="sidebar-d10-button">Roll d10</button>
+        <button class="action" id="sidebar-d8-button">Roll d8</button>
+      </div>
+      <div class="block" id="sidebar-button-bar">
+        <button class="action" id="sidebar-d6-button">Roll d6</button>
+        <button class="action" id="sidebar-d4-button">Roll d4</button>
+      </div>
+      <div class="block" id="sidebar-button-bar">
+        <button class="action" id="sidebar-d100-button">Roll d100</button>
+      </div>
+      <p>
+      Pressing one of the buttons will generate a die roll and insert the result at the cursor position in the Google Doc.
+      </p>
+      <div id="sidebar-status"></div>
+    </div>
+
+    <div class="sidebar bottom">
+    </div>
+
+    <!-- Use a templated HTML printing scriptlet to import JavaScript -->
+    <?!= HtmlService.createHtmlOutputFromFile('SidebarJavaScript').getContent(); ?>
+  </body>
+</html>
+
+
