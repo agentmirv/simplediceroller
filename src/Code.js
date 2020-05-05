@@ -12,7 +12,7 @@ var SIDEBAR_TITLE = 'Simple Dice Roller';
 function onOpen(e) {
   DocumentApp.getUi()
       .createAddonMenu()
-      .addItem('Show sidebar', 'showSidebar')
+      .addItem('Roll dice', 'showSidebar')
       .addToUi();
 }
 
